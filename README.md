@@ -1,0 +1,2 @@
+# selectablebrave
+WinWait("AGENT") $Agent = WinGetHandle("AGENT") _JavaAttachAndWait($Agent) WinActivate($Agent) WinSetState($Agent, "", @SW_MAXIMIZE)  Do     Mouseclick("left", 1266, 81)     $sTabState1 = _JavaObjPropertyGet("", "License", "page tab", "", "States")      Until $sTabState1 = "enabled,focusable,visible,showing,selectable,selected"  $sTabState2 = _JavaObjPropertyGet("", "License List", "page tab", "", "States")  ; 
